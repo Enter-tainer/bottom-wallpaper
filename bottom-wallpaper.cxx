@@ -51,11 +51,11 @@ struct WtWindow
 
 int main()
 {
-  // FreeConsole();
+  FreeConsole();
   startBottom();
   WtWindow w;
   RECT sz = Utils::GetExpectedSize(w.content_handle);
   Utils::HideWindow(w.main_handle);
-  SetParent(w.content_handle, Utils::GetProgman());
   SetWindowPos(w.content_handle, HWND_BOTTOM, 0, -36, sz.right - sz.left, sz.bottom - sz.top, SWP_SHOWWINDOW);
+  SetParent(w.content_handle, Utils::GetWorkerW());
 }

@@ -3,11 +3,12 @@
 #include <Windows.h>
 #include <string>
 #include <iostream>
+#include <cinttypes>
 
 namespace Utils
 {
 
-  HWND GetProgman();
+  HWND GetWorkerW();
   HWND GetFolderView();
   RECT GetExpectedSize(HWND wt_handle);
   void HideWindow(HWND h);
